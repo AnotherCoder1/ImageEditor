@@ -1,0 +1,1 @@
+A basic image editor tool that can be used to edit an image, merge image files, draw shapes in image file, draw a shape from a given sets of Bezier curve control points from a json file with `.json` extension.
