@@ -146,6 +146,25 @@ class MoreShapes(ImageEditing):
         self.pen.rounded_rectangle((coords[0], coords[1], coords[2], coords[3]), radius=radius, outline=self.color)
         self.image.save(self.file_name, 'PNG')
 
+    def init_diagonal_30_degree(self):
+        pos=[
+            Vector2(0, 1),
+            Vector2(1, 0.577),
+            Vector2(0, 0.577),
+            Vector2(1, 0)
+        ]
+        return pos
+
+    def draw_diagonal_30_degree(self, size:Vector2):
+        self.pos=self.init_diagonal_30_degree()
+        self.scale(size)
+        self.conv_vec2d_to_tuple()
+        self.pen.line([self.pos[0],self.pos[1]], self.color, 1)
+        self.pen.line([self.pos[2],self.pos[3]], self.color, 1)
+        self.image.save(self.file_name, 'PNG')
+
+
+
                      
                  
      
